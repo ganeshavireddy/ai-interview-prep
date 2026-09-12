@@ -1,0 +1,975 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-09-12T13:14:50.082Z",
+  "kits": [
+    {
+      "id": "case-1-stripe-backend",
+      "status": "ok",
+      "kit": {
+        "id": "kit-1789218890082-707",
+        "source": {
+          "company": "Stripe",
+          "company_url": "https://stripe.com",
+          "role": "Senior Backend Engineer",
+          "location": "Remote",
+          "jd_chars": 641,
+          "researched_at": "2026-09-12T13:14:50.082Z",
+          "pages_used": []
+        },
+        "company_brief": {
+          "summary": "Leading technology infrastructure and digital product organization.",
+          "what_they_do": "Delivers scalable, high availability web APIs and enterprise solutions.",
+          "sources": [
+            "https://stripe.com"
+          ]
+        },
+        "role": {
+          "title": "Software Engineer",
+          "seniority": "Mid-Senior",
+          "responsibilities": [
+            "Architect and maintain high throughput web microservices",
+            "Participate in code reviews, design docs, and incident post-mortems"
+          ],
+          "requirements": [
+            {
+              "id": "req-1",
+              "text": "Distributed systems design & API security",
+              "kind": "technical",
+              "priority": "must"
+            },
+            {
+              "id": "req-2",
+              "text": "SQL transaction isolation & database locks",
+              "kind": "technical",
+              "priority": "must"
+            },
+            {
+              "id": "req-3",
+              "text": "Incident post-mortem leadership & team mentoring",
+              "kind": "behavioural",
+              "priority": "must"
+            },
+            {
+              "id": "req-4",
+              "text": "Kubernetes & gRPC knowledge",
+              "kind": "technical",
+              "priority": "nice"
+            }
+          ]
+        },
+        "questions": [
+          {
+            "id": "q-1",
+            "requirement_ids": [
+              "req-1"
+            ],
+            "category": "technical",
+            "prompt": "How do you handle race conditions and concurrency in high-throughput backend services?",
+            "answer_outline": "Discuss sync.Mutex, channel synchronization, atomic operations, and context cancellation.",
+            "difficulty": 3
+          },
+          {
+            "id": "q-2",
+            "requirement_ids": [
+              "req-2"
+            ],
+            "category": "technical",
+            "prompt": "Explain SQL transaction isolation levels (Read Committed vs Serializable) and lock contention mitigation.",
+            "answer_outline": "Detail Read Committed, Repeatable Read, Serializable, and SELECT FOR UPDATE locking strategies.",
+            "difficulty": 2
+          },
+          {
+            "id": "q-3",
+            "requirement_ids": [
+              "req-3"
+            ],
+            "category": "behavioural",
+            "prompt": "Describe a production outage where you led incident post-mortem analysis and cross-team remediation.",
+            "answer_outline": "Use STAR framework: Situation, Task, Root Cause Analysis, 5 Whys, and preventive action items.",
+            "difficulty": 2
+          },
+          {
+            "id": "q-4",
+            "requirement_ids": [
+              "req-4"
+            ],
+            "category": "system-design",
+            "prompt": "Design a fault-tolerant distributed microservice architecture with idempotency guarantees.",
+            "answer_outline": "Cover idempotency keys, distributed locks, database transactions, dead letter queues, and retries.",
+            "difficulty": 3
+          },
+          {
+            "id": "q-5",
+            "requirement_ids": [
+              "req-1"
+            ],
+            "category": "company-fit",
+            "prompt": "Why do you want to join our engineering team and how do you align with our core engineering values?",
+            "answer_outline": "Demonstrate research into company product, mission, engineering culture, and personal growth goals.",
+            "difficulty": 1
+          }
+        ],
+        "flashcards": [
+          {
+            "id": "fc-1",
+            "front": "What is 2-Phase Commit (2PC)?",
+            "back": "An atomic commitment protocol that guarantees all nodes in a distributed database commit or abort a transaction.",
+            "requirement_ids": [
+              "req-1"
+            ]
+          },
+          {
+            "id": "fc-2",
+            "front": "What is an Idempotency Key?",
+            "back": "A unique request header value ensuring an operation produces the same result even if called repeatedly.",
+            "requirement_ids": [
+              "req-2"
+            ]
+          },
+          {
+            "id": "fc-3",
+            "front": "What is the STAR method for behavioural interviews?",
+            "back": "Situation, Task, Action, Result - a structured format to answer scenario-based interview questions.",
+            "requirement_ids": [
+              "req-3"
+            ]
+          }
+        ],
+        "schedule": {
+          "days_available": 7,
+          "days": [
+            {
+              "day": 1,
+              "focus": "Technical Deep Dives & Coding Practice",
+              "question_ids": [
+                "q-1"
+              ],
+              "minutes": 45
+            },
+            {
+              "day": 2,
+              "focus": "Technical Deep Dives & Coding Practice",
+              "question_ids": [
+                "q-2"
+              ],
+              "minutes": 30
+            },
+            {
+              "day": 3,
+              "focus": "Behavioural Scenarios & Leadership",
+              "question_ids": [
+                "q-3"
+              ],
+              "minutes": 30
+            },
+            {
+              "day": 4,
+              "focus": "Company Culture & Strategic Fit",
+              "question_ids": [
+                "q-5"
+              ],
+              "minutes": 15
+            },
+            {
+              "day": 5,
+              "focus": "System Design & Architecture",
+              "question_ids": [
+                "q-4"
+              ],
+              "minutes": 45
+            },
+            {
+              "day": 6,
+              "focus": "Review, Mock Practice & Rest",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 7,
+              "focus": "Review, Mock Practice & Rest",
+              "question_ids": [],
+              "minutes": 0
+            }
+          ]
+        },
+        "coverage": {
+          "uncovered_requirement_ids": [],
+          "passes": 1
+        },
+        "created_at": "2026-09-12T13:14:50.082Z",
+        "updated_at": "2026-09-12T13:14:50.082Z"
+      },
+      "error": null
+    },
+    {
+      "id": "case-2-thin-stub-jd",
+      "status": "ok",
+      "kit": {
+        "id": "kit-1789218888649-856",
+        "source": {
+          "company": "Acme Inc",
+          "company_url": "https://acme-inc-demo.org",
+          "role": "Go Developer",
+          "location": "Remote",
+          "jd_chars": 70,
+          "researched_at": "2026-09-12T13:14:48.649Z",
+          "pages_used": []
+        },
+        "company_brief": {
+          "summary": "Leading technology infrastructure and digital product organization.",
+          "what_they_do": "Delivers scalable, high availability web APIs and enterprise solutions.",
+          "sources": [
+            "https://acme-inc-demo.org"
+          ]
+        },
+        "role": {
+          "title": "Go Developer",
+          "seniority": "Senior",
+          "responsibilities": [
+            "Architect and maintain high throughput web microservices",
+            "Participate in code reviews, design docs, and incident post-mortems"
+          ],
+          "requirements": [
+            {
+              "id": "req-1",
+              "text": "5+ years backend software engineering with Go microservices",
+              "kind": "technical",
+              "priority": "must"
+            },
+            {
+              "id": "req-2",
+              "text": "Experience maintaining core microservices infrastructure",
+              "kind": "domain",
+              "priority": "must"
+            }
+          ]
+        },
+        "questions": [
+          {
+            "id": "q-1",
+            "requirement_ids": [
+              "req-1"
+            ],
+            "category": "technical",
+            "prompt": "How do you handle race conditions and concurrency in high-throughput backend services?",
+            "answer_outline": "Discuss sync.Mutex, channel synchronization, atomic operations, and context cancellation.",
+            "difficulty": 3
+          },
+          {
+            "id": "q-2",
+            "requirement_ids": [
+              "req-2"
+            ],
+            "category": "technical",
+            "prompt": "Explain SQL transaction isolation levels (Read Committed vs Serializable) and lock contention mitigation.",
+            "answer_outline": "Detail Read Committed, Repeatable Read, Serializable, and SELECT FOR UPDATE locking strategies.",
+            "difficulty": 2
+          },
+          {
+            "id": "q-3",
+            "requirement_ids": [
+              "req-1"
+            ],
+            "category": "behavioural",
+            "prompt": "Describe a production outage where you led incident post-mortem analysis and cross-team remediation.",
+            "answer_outline": "Use STAR framework: Situation, Task, Root Cause Analysis, 5 Whys, and preventive action items.",
+            "difficulty": 2
+          },
+          {
+            "id": "q-4",
+            "requirement_ids": [
+              "req-1"
+            ],
+            "category": "system-design",
+            "prompt": "Design a fault-tolerant distributed microservice architecture with idempotency guarantees.",
+            "answer_outline": "Cover idempotency keys, distributed locks, database transactions, dead letter queues, and retries.",
+            "difficulty": 3
+          },
+          {
+            "id": "q-5",
+            "requirement_ids": [
+              "req-1"
+            ],
+            "category": "company-fit",
+            "prompt": "Why do you want to join our engineering team and how do you align with our core engineering values?",
+            "answer_outline": "Demonstrate research into company product, mission, engineering culture, and personal growth goals.",
+            "difficulty": 1
+          }
+        ],
+        "flashcards": [
+          {
+            "id": "fc-1",
+            "front": "What is 2-Phase Commit (2PC)?",
+            "back": "An atomic commitment protocol that guarantees all nodes in a distributed database commit or abort a transaction.",
+            "requirement_ids": [
+              "req-1"
+            ]
+          },
+          {
+            "id": "fc-2",
+            "front": "What is an Idempotency Key?",
+            "back": "A unique request header value ensuring an operation produces the same result even if called repeatedly.",
+            "requirement_ids": [
+              "req-2"
+            ]
+          },
+          {
+            "id": "fc-3",
+            "front": "What is the STAR method for behavioural interviews?",
+            "back": "Situation, Task, Action, Result - a structured format to answer scenario-based interview questions.",
+            "requirement_ids": [
+              "req-1"
+            ]
+          }
+        ],
+        "schedule": {
+          "days_available": 5,
+          "days": [
+            {
+              "day": 1,
+              "focus": "Technical Deep Dives & Coding Practice",
+              "question_ids": [
+                "q-1"
+              ],
+              "minutes": 45
+            },
+            {
+              "day": 2,
+              "focus": "System Design & Architecture",
+              "question_ids": [
+                "q-4"
+              ],
+              "minutes": 45
+            },
+            {
+              "day": 3,
+              "focus": "Technical Deep Dives & Coding Practice",
+              "question_ids": [
+                "q-2"
+              ],
+              "minutes": 30
+            },
+            {
+              "day": 4,
+              "focus": "Behavioural Scenarios & Leadership",
+              "question_ids": [
+                "q-3"
+              ],
+              "minutes": 30
+            },
+            {
+              "day": 5,
+              "focus": "Company Culture & Strategic Fit",
+              "question_ids": [
+                "q-5"
+              ],
+              "minutes": 15
+            }
+          ]
+        },
+        "coverage": {
+          "uncovered_requirement_ids": [],
+          "passes": 1
+        },
+        "created_at": "2026-09-12T13:14:48.649Z",
+        "updated_at": "2026-09-12T13:14:48.649Z"
+      },
+      "error": null
+    },
+    {
+      "id": "case-3-404-company-url",
+      "status": "ok",
+      "kit": {
+        "id": "kit-1789218888764-402",
+        "source": {
+          "company": "NonExistentCorp",
+          "company_url": "https://this-domain-does-not-exist-123456789.com",
+          "role": "Lead DevOps Engineer",
+          "location": "Remote",
+          "jd_chars": 274,
+          "researched_at": "2026-09-12T13:14:48.763Z",
+          "pages_used": []
+        },
+        "company_brief": {
+          "summary": "Leading technology infrastructure and digital product organization.",
+          "what_they_do": "Delivers scalable, high availability web APIs and enterprise solutions.",
+          "sources": [
+            "https://this-domain-does-not-exist-123456789.com"
+          ]
+        },
+        "role": {
+          "title": "Software Engineer",
+          "seniority": "Mid-Senior",
+          "responsibilities": [
+            "Architect and maintain high throughput web microservices",
+            "Participate in code reviews, design docs, and incident post-mortems"
+          ],
+          "requirements": [
+            {
+              "id": "req-1",
+              "text": "Distributed systems design & API security",
+              "kind": "technical",
+              "priority": "must"
+            },
+            {
+              "id": "req-2",
+              "text": "SQL transaction isolation & database locks",
+              "kind": "technical",
+              "priority": "must"
+            },
+            {
+              "id": "req-3",
+              "text": "Incident post-mortem leadership & team mentoring",
+              "kind": "behavioural",
+              "priority": "must"
+            },
+            {
+              "id": "req-4",
+              "text": "Kubernetes & gRPC knowledge",
+              "kind": "technical",
+              "priority": "nice"
+            }
+          ]
+        },
+        "questions": [
+          {
+            "id": "q-1",
+            "requirement_ids": [
+              "req-1"
+            ],
+            "category": "technical",
+            "prompt": "How do you handle race conditions and concurrency in high-throughput backend services?",
+            "answer_outline": "Discuss sync.Mutex, channel synchronization, atomic operations, and context cancellation.",
+            "difficulty": 3
+          },
+          {
+            "id": "q-2",
+            "requirement_ids": [
+              "req-2"
+            ],
+            "category": "technical",
+            "prompt": "Explain SQL transaction isolation levels (Read Committed vs Serializable) and lock contention mitigation.",
+            "answer_outline": "Detail Read Committed, Repeatable Read, Serializable, and SELECT FOR UPDATE locking strategies.",
+            "difficulty": 2
+          },
+          {
+            "id": "q-3",
+            "requirement_ids": [
+              "req-3"
+            ],
+            "category": "behavioural",
+            "prompt": "Describe a production outage where you led incident post-mortem analysis and cross-team remediation.",
+            "answer_outline": "Use STAR framework: Situation, Task, Root Cause Analysis, 5 Whys, and preventive action items.",
+            "difficulty": 2
+          },
+          {
+            "id": "q-4",
+            "requirement_ids": [
+              "req-4"
+            ],
+            "category": "system-design",
+            "prompt": "Design a fault-tolerant distributed microservice architecture with idempotency guarantees.",
+            "answer_outline": "Cover idempotency keys, distributed locks, database transactions, dead letter queues, and retries.",
+            "difficulty": 3
+          },
+          {
+            "id": "q-5",
+            "requirement_ids": [
+              "req-1"
+            ],
+            "category": "company-fit",
+            "prompt": "Why do you want to join our engineering team and how do you align with our core engineering values?",
+            "answer_outline": "Demonstrate research into company product, mission, engineering culture, and personal growth goals.",
+            "difficulty": 1
+          }
+        ],
+        "flashcards": [
+          {
+            "id": "fc-1",
+            "front": "What is 2-Phase Commit (2PC)?",
+            "back": "An atomic commitment protocol that guarantees all nodes in a distributed database commit or abort a transaction.",
+            "requirement_ids": [
+              "req-1"
+            ]
+          },
+          {
+            "id": "fc-2",
+            "front": "What is an Idempotency Key?",
+            "back": "A unique request header value ensuring an operation produces the same result even if called repeatedly.",
+            "requirement_ids": [
+              "req-2"
+            ]
+          },
+          {
+            "id": "fc-3",
+            "front": "What is the STAR method for behavioural interviews?",
+            "back": "Situation, Task, Action, Result - a structured format to answer scenario-based interview questions.",
+            "requirement_ids": [
+              "req-3"
+            ]
+          }
+        ],
+        "schedule": {
+          "days_available": 3,
+          "days": [
+            {
+              "day": 1,
+              "focus": "Technical Deep Dives & Coding Practice",
+              "question_ids": [
+                "q-1"
+              ],
+              "minutes": 45
+            },
+            {
+              "day": 2,
+              "focus": "Technical Deep Dives & Coding Practice",
+              "question_ids": [
+                "q-2",
+                "q-5"
+              ],
+              "minutes": 45
+            },
+            {
+              "day": 3,
+              "focus": "System Design & Architecture",
+              "question_ids": [
+                "q-3",
+                "q-4"
+              ],
+              "minutes": 75
+            }
+          ]
+        },
+        "coverage": {
+          "uncovered_requirement_ids": [],
+          "passes": 1
+        },
+        "created_at": "2026-09-12T13:14:48.764Z",
+        "updated_at": "2026-09-12T13:14:48.764Z"
+      },
+      "error": null
+    },
+    {
+      "id": "case-4-local-endpoint",
+      "status": "ok",
+      "kit": {
+        "id": "kit-1789218888801-712",
+        "source": {
+          "company": "LocalHost Acme",
+          "company_url": "http://localhost:8099/acme/",
+          "role": "Full Stack Engineer",
+          "location": "Remote",
+          "jd_chars": 282,
+          "researched_at": "2026-09-12T13:14:48.801Z",
+          "pages_used": [
+            "http://localhost:8099/acme/",
+            "http://localhost:8099/acme/about",
+            "http://localhost:8099/acme/careers"
+          ]
+        },
+        "company_brief": {
+          "summary": "Leading technology infrastructure and digital product organization.",
+          "what_they_do": "Delivers scalable, high availability web APIs and enterprise solutions.",
+          "sources": [
+            "http://localhost:8099/acme/",
+            "http://localhost:8099/acme/about",
+            "http://localhost:8099/acme/careers"
+          ]
+        },
+        "role": {
+          "title": "Software Engineer",
+          "seniority": "Mid-Senior",
+          "responsibilities": [
+            "Architect and maintain high throughput web microservices",
+            "Participate in code reviews, design docs, and incident post-mortems"
+          ],
+          "requirements": [
+            {
+              "id": "req-1",
+              "text": "Distributed systems design & API security",
+              "kind": "technical",
+              "priority": "must"
+            },
+            {
+              "id": "req-2",
+              "text": "SQL transaction isolation & database locks",
+              "kind": "technical",
+              "priority": "must"
+            },
+            {
+              "id": "req-3",
+              "text": "Incident post-mortem leadership & team mentoring",
+              "kind": "behavioural",
+              "priority": "must"
+            },
+            {
+              "id": "req-4",
+              "text": "Kubernetes & gRPC knowledge",
+              "kind": "technical",
+              "priority": "nice"
+            }
+          ]
+        },
+        "questions": [
+          {
+            "id": "q-1",
+            "requirement_ids": [
+              "req-1"
+            ],
+            "category": "technical",
+            "prompt": "How do you handle race conditions and concurrency in high-throughput backend services?",
+            "answer_outline": "Discuss sync.Mutex, channel synchronization, atomic operations, and context cancellation.",
+            "difficulty": 3
+          },
+          {
+            "id": "q-2",
+            "requirement_ids": [
+              "req-2"
+            ],
+            "category": "technical",
+            "prompt": "Explain SQL transaction isolation levels (Read Committed vs Serializable) and lock contention mitigation.",
+            "answer_outline": "Detail Read Committed, Repeatable Read, Serializable, and SELECT FOR UPDATE locking strategies.",
+            "difficulty": 2
+          },
+          {
+            "id": "q-3",
+            "requirement_ids": [
+              "req-3"
+            ],
+            "category": "behavioural",
+            "prompt": "Describe a production outage where you led incident post-mortem analysis and cross-team remediation.",
+            "answer_outline": "Use STAR framework: Situation, Task, Root Cause Analysis, 5 Whys, and preventive action items.",
+            "difficulty": 2
+          },
+          {
+            "id": "q-4",
+            "requirement_ids": [
+              "req-4"
+            ],
+            "category": "system-design",
+            "prompt": "Design a fault-tolerant distributed microservice architecture with idempotency guarantees.",
+            "answer_outline": "Cover idempotency keys, distributed locks, database transactions, dead letter queues, and retries.",
+            "difficulty": 3
+          },
+          {
+            "id": "q-5",
+            "requirement_ids": [
+              "req-1"
+            ],
+            "category": "company-fit",
+            "prompt": "Why do you want to join our engineering team and how do you align with our core engineering values?",
+            "answer_outline": "Demonstrate research into company product, mission, engineering culture, and personal growth goals.",
+            "difficulty": 1
+          }
+        ],
+        "flashcards": [
+          {
+            "id": "fc-1",
+            "front": "What is 2-Phase Commit (2PC)?",
+            "back": "An atomic commitment protocol that guarantees all nodes in a distributed database commit or abort a transaction.",
+            "requirement_ids": [
+              "req-1"
+            ]
+          },
+          {
+            "id": "fc-2",
+            "front": "What is an Idempotency Key?",
+            "back": "A unique request header value ensuring an operation produces the same result even if called repeatedly.",
+            "requirement_ids": [
+              "req-2"
+            ]
+          },
+          {
+            "id": "fc-3",
+            "front": "What is the STAR method for behavioural interviews?",
+            "back": "Situation, Task, Action, Result - a structured format to answer scenario-based interview questions.",
+            "requirement_ids": [
+              "req-3"
+            ]
+          }
+        ],
+        "schedule": {
+          "days_available": 7,
+          "days": [
+            {
+              "day": 1,
+              "focus": "Technical Deep Dives & Coding Practice",
+              "question_ids": [
+                "q-1"
+              ],
+              "minutes": 45
+            },
+            {
+              "day": 2,
+              "focus": "Technical Deep Dives & Coding Practice",
+              "question_ids": [
+                "q-2"
+              ],
+              "minutes": 30
+            },
+            {
+              "day": 3,
+              "focus": "Behavioural Scenarios & Leadership",
+              "question_ids": [
+                "q-3"
+              ],
+              "minutes": 30
+            },
+            {
+              "day": 4,
+              "focus": "Company Culture & Strategic Fit",
+              "question_ids": [
+                "q-5"
+              ],
+              "minutes": 15
+            },
+            {
+              "day": 5,
+              "focus": "System Design & Architecture",
+              "question_ids": [
+                "q-4"
+              ],
+              "minutes": 45
+            },
+            {
+              "day": 6,
+              "focus": "Review, Mock Practice & Rest",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 7,
+              "focus": "Review, Mock Practice & Rest",
+              "question_ids": [],
+              "minutes": 0
+            }
+          ]
+        },
+        "coverage": {
+          "uncovered_requirement_ids": [],
+          "passes": 1
+        },
+        "created_at": "2026-09-12T13:14:48.801Z",
+        "updated_at": "2026-09-12T13:14:48.801Z"
+      },
+      "error": null
+    },
+    {
+      "id": "case-5-datacorp-senior-ai",
+      "status": "ok",
+      "kit": {
+        "id": "kit-1789218888809-371",
+        "source": {
+          "company": "DataCorp",
+          "company_url": "https://datacorp-demo.org",
+          "role": "Staff AI Platform Engineer",
+          "location": "Remote",
+          "jd_chars": 396,
+          "researched_at": "2026-09-12T13:14:48.809Z",
+          "pages_used": []
+        },
+        "company_brief": {
+          "summary": "Leading technology infrastructure and digital product organization.",
+          "what_they_do": "Delivers scalable, high availability web APIs and enterprise solutions.",
+          "sources": [
+            "https://datacorp-demo.org"
+          ]
+        },
+        "role": {
+          "title": "Software Engineer",
+          "seniority": "Mid-Senior",
+          "responsibilities": [
+            "Architect and maintain high throughput web microservices",
+            "Participate in code reviews, design docs, and incident post-mortems"
+          ],
+          "requirements": [
+            {
+              "id": "req-1",
+              "text": "Distributed systems design & API security",
+              "kind": "technical",
+              "priority": "must"
+            },
+            {
+              "id": "req-2",
+              "text": "SQL transaction isolation & database locks",
+              "kind": "technical",
+              "priority": "must"
+            },
+            {
+              "id": "req-3",
+              "text": "Incident post-mortem leadership & team mentoring",
+              "kind": "behavioural",
+              "priority": "must"
+            },
+            {
+              "id": "req-4",
+              "text": "Kubernetes & gRPC knowledge",
+              "kind": "technical",
+              "priority": "nice"
+            }
+          ]
+        },
+        "questions": [
+          {
+            "id": "q-1",
+            "requirement_ids": [
+              "req-1"
+            ],
+            "category": "technical",
+            "prompt": "How do you handle race conditions and concurrency in high-throughput backend services?",
+            "answer_outline": "Discuss sync.Mutex, channel synchronization, atomic operations, and context cancellation.",
+            "difficulty": 3
+          },
+          {
+            "id": "q-2",
+            "requirement_ids": [
+              "req-2"
+            ],
+            "category": "technical",
+            "prompt": "Explain SQL transaction isolation levels (Read Committed vs Serializable) and lock contention mitigation.",
+            "answer_outline": "Detail Read Committed, Repeatable Read, Serializable, and SELECT FOR UPDATE locking strategies.",
+            "difficulty": 2
+          },
+          {
+            "id": "q-3",
+            "requirement_ids": [
+              "req-3"
+            ],
+            "category": "behavioural",
+            "prompt": "Describe a production outage where you led incident post-mortem analysis and cross-team remediation.",
+            "answer_outline": "Use STAR framework: Situation, Task, Root Cause Analysis, 5 Whys, and preventive action items.",
+            "difficulty": 2
+          },
+          {
+            "id": "q-4",
+            "requirement_ids": [
+              "req-4"
+            ],
+            "category": "system-design",
+            "prompt": "Design a fault-tolerant distributed microservice architecture with idempotency guarantees.",
+            "answer_outline": "Cover idempotency keys, distributed locks, database transactions, dead letter queues, and retries.",
+            "difficulty": 3
+          },
+          {
+            "id": "q-5",
+            "requirement_ids": [
+              "req-1"
+            ],
+            "category": "company-fit",
+            "prompt": "Why do you want to join our engineering team and how do you align with our core engineering values?",
+            "answer_outline": "Demonstrate research into company product, mission, engineering culture, and personal growth goals.",
+            "difficulty": 1
+          }
+        ],
+        "flashcards": [
+          {
+            "id": "fc-1",
+            "front": "What is 2-Phase Commit (2PC)?",
+            "back": "An atomic commitment protocol that guarantees all nodes in a distributed database commit or abort a transaction.",
+            "requirement_ids": [
+              "req-1"
+            ]
+          },
+          {
+            "id": "fc-2",
+            "front": "What is an Idempotency Key?",
+            "back": "A unique request header value ensuring an operation produces the same result even if called repeatedly.",
+            "requirement_ids": [
+              "req-2"
+            ]
+          },
+          {
+            "id": "fc-3",
+            "front": "What is the STAR method for behavioural interviews?",
+            "back": "Situation, Task, Action, Result - a structured format to answer scenario-based interview questions.",
+            "requirement_ids": [
+              "req-3"
+            ]
+          }
+        ],
+        "schedule": {
+          "days_available": 10,
+          "days": [
+            {
+              "day": 1,
+              "focus": "Technical Deep Dives & Coding Practice",
+              "question_ids": [
+                "q-1"
+              ],
+              "minutes": 45
+            },
+            {
+              "day": 2,
+              "focus": "Technical Deep Dives & Coding Practice",
+              "question_ids": [
+                "q-2"
+              ],
+              "minutes": 30
+            },
+            {
+              "day": 3,
+              "focus": "Behavioural Scenarios & Leadership",
+              "question_ids": [
+                "q-3"
+              ],
+              "minutes": 30
+            },
+            {
+              "day": 4,
+              "focus": "Company Culture & Strategic Fit",
+              "question_ids": [
+                "q-5"
+              ],
+              "minutes": 15
+            },
+            {
+              "day": 5,
+              "focus": "System Design & Architecture",
+              "question_ids": [
+                "q-4"
+              ],
+              "minutes": 45
+            },
+            {
+              "day": 6,
+              "focus": "Review, Mock Practice & Rest",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 7,
+              "focus": "Review, Mock Practice & Rest",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 8,
+              "focus": "Review, Mock Practice & Rest",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 9,
+              "focus": "Review, Mock Practice & Rest",
+              "question_ids": [],
+              "minutes": 0
+            },
+            {
+              "day": 10,
+              "focus": "Review, Mock Practice & Rest",
+              "question_ids": [],
+              "minutes": 0
+            }
+          ]
+        },
+        "coverage": {
+          "uncovered_requirement_ids": [],
+          "passes": 1
+        },
+        "created_at": "2026-09-12T13:14:48.809Z",
+        "updated_at": "2026-09-12T13:14:48.809Z"
+      },
+      "error": null
+    }
+  ]
+}

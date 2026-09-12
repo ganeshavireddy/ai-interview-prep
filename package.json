@@ -1,0 +1,19 @@
+{
+  "name": "ai-interview-prep-kit-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "The AI Interview Prep Kit web application, backend service, scraper pipeline, and CLI batch evaluator.",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "evaluate": "ts-node packages/backend/src/cli/evaluate.ts",
+    "test": "npm run test --workspace=@ai-interview-prep/backend",
+    "dev:backend": "npm run dev --workspace=@ai-interview-prep/backend",
+    "dev:frontend": "npm run dev --workspace=@ai-interview-prep/frontend",
+    "build:shared": "npm run build --workspace=@ai-interview-prep/shared"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}

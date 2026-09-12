@@ -1,0 +1,42 @@
+[
+  {
+    "id": "case-1-stripe-backend",
+    "company": "Stripe",
+    "company_url": "https://stripe.com",
+    "role": "Senior Backend Engineer",
+    "jd_text": "Stripe is looking for a Senior Backend Engineer to join our Payments Infrastructure team. You will build high-throughput distributed systems in Ruby, Go, and Java. Requirements:\n- 5+ years of experience with distributed systems design, API security, and database consistency (must, technical).\n- Mastery of SQL database transaction isolation levels and distributed locks (must, technical).\n- Experience with high availability payment processing systems (must, domain).\n- Strong communication, cross-team mentoring, and incident post-mortem analysis (must, behavioural).\n- Knowledge of Kubernetes, gRPC, and Kafka is a plus (nice, technical).",
+    "days_available": 7
+  },
+  {
+    "id": "case-2-thin-stub-jd",
+    "company": "Acme Inc",
+    "company_url": "https://acme-inc-demo.org",
+    "role": "Go Developer",
+    "jd_text": "We need a Senior Go Developer to help maintain our core microservices.",
+    "days_available": 5
+  },
+  {
+    "id": "case-3-404-company-url",
+    "company": "NonExistentCorp",
+    "company_url": "https://this-domain-does-not-exist-123456789.com",
+    "role": "Lead DevOps Engineer",
+    "jd_text": "Lead DevOps Engineer needed. Requirements:\n- Kubernetes cluster administration and Terraform infrastructure as code (must, technical).\n- CI/CD pipeline automation with GitHub Actions (must, technical).\n- On-call rotation leadership and incident handling (must, behavioural).",
+    "days_available": 3
+  },
+  {
+    "id": "case-4-local-endpoint",
+    "company": "LocalHost Acme",
+    "company_url": "http://localhost:8099/acme/",
+    "role": "Full Stack Engineer",
+    "jd_text": "Full Stack Engineer for local e-commerce app. Requirements:\n- Next.js App Router and React Server Components (must, technical).\n- Node.js Express REST API design and Mongoose MongoDB schema design (must, technical).\n- User experience polish and responsive CSS layout (nice, domain).",
+    "days_available": 7
+  },
+  {
+    "id": "case-5-datacorp-senior-ai",
+    "company": "DataCorp",
+    "company_url": "https://datacorp-demo.org",
+    "role": "Staff AI Platform Engineer",
+    "jd_text": "Staff AI Platform Engineer to lead LLM deployment pipelines. Requirements:\n- Large language model inference optimization (vLLM, TensorRT-LLM) (must, technical).\n- Vector database design (pgvector, Qdrant) and RAG architecture (must, technical).\n- Cross-functional technical leadership and architecture reviews (must, behavioural).\n- Python performance tuning and C++ extensions (nice, technical).",
+    "days_available": 10
+  }
+]
