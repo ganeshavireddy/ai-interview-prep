@@ -14,7 +14,7 @@ const nextConfig = {
     return [
       {
         source: "/api/:path*",
-        destination: "http://localhost:8099/api/:path*",
+        destination: "https://ai-interview-prep-9cu6.onrender.com/api/:path*",
       },
     ];
   },
