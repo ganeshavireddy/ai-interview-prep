@@ -5,6 +5,7 @@ import { useParams, useRouter } from "next/navigation";
 import Link from "next/link";
 import { BookOpen, RotateCw, CheckCircle2, ThumbsUp, Flame, RefreshCw, ArrowLeft, ChevronRight } from "lucide-react";
 import { Kit, Flashcard } from "@ai-interview-prep/shared";
+import { safeFetchJSON } from "@/lib/api";
 
 interface PrioritizedCard extends Flashcard {
   confidenceRating?: "Again" | "Good" | "Easy";
@@ -25,10 +26,9 @@ export default function PracticeModePage() {
 
   useEffect(() => {
     if (!kitId) return;
-    fetch(`/api/kits/${kitId}`)
-      .then((res) => res.json())
+    safeFetchJSON<Kit>(`/api/kits/${kitId}`)
       .then((data) => {
-        if (data && !data.error) {
+        if (data) {
           setKit(data);
           const initialQueue: PrioritizedCard[] = (data.flashcards || []).map((fc: Flashcard) => ({
             ...fc,

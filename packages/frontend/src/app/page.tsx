@@ -4,14 +4,14 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Sparkles, Layers, BookOpen, Clock, ArrowRight, ShieldCheck, AlertCircle } from "lucide-react";
 import { Kit } from "@ai-interview-prep/shared";
+import { safeFetchJSON } from "@/lib/api";
 
 export default function DashboardPage() {
   const [kits, setKits] = useState<Kit[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("/api/kits")
-      .then((res) => res.json())
+    safeFetchJSON<Kit[]>("/api/kits")
       .then((data) => {
         if (Array.isArray(data)) setKits(data);
       })

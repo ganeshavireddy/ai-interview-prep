@@ -2,7 +2,9 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { Sparkles, Globe, Briefcase, MapPin, Calendar, FileText, CheckCircle2, Loader2, ArrowRight } from "lucide-react";
+import { Sparkles, Globe, Briefcase, Calendar, FileText, CheckCircle2, Loader2 } from "lucide-react";
+import { safeFetchJSON } from "@/lib/api";
+import { Kit } from "@ai-interview-prep/shared";
 
 const PIPELINE_STAGES = [
   { step: 1, label: "Requirement Extraction", desc: "Analyzing Job Description for core technical & behavioural skills" },
@@ -27,7 +29,6 @@ export default function GeneratorWizardPage() {
 
   const [isGenerating, setIsGenerating] = useState(false);
   const [currentStep, setCurrentStep] = useState(1);
-  const [currentDetail, setCurrentDetail] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
 
   const handleGenerate = async (e: React.FormEvent) => {
@@ -40,7 +41,6 @@ export default function GeneratorWizardPage() {
     setErrorMessage("");
     setIsGenerating(true);
     setCurrentStep(1);
-    setCurrentDetail("Initializing research pipeline...");
 
     // Simulate multi-step progress feedback for optimal UI experience
     const progressTimer = setInterval(() => {
@@ -48,12 +48,11 @@ export default function GeneratorWizardPage() {
         if (prev < 6) return prev + 1;
         return prev;
       });
-    }, 1200);
+    }, 1500);
 
     try {
-      const response = await fetch("/api/kits/generate", {
+      const kit = await safeFetchJSON<Kit>("/api/kits/generate", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           company,
           company_url: companyUrl,
@@ -65,18 +64,10 @@ export default function GeneratorWizardPage() {
       });
 
       clearInterval(progressTimer);
-
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.error || "Generation failed.");
-      }
-
-      const kit = await response.json();
       setCurrentStep(6);
-      setCurrentDetail("Kit generated successfully! Redirecting to Builder...");
 
       setTimeout(() => {
-        router.push(`/builder/${kit.id || kit._id}`);
+        router.push(`/builder/${kit.id || (kit as any)._id}`);
       }, 800);
     } catch (err: any) {
       clearInterval(progressTimer);

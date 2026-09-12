@@ -19,6 +19,7 @@ import {
   ChevronDown,
 } from "lucide-react";
 import { Kit, Question, Flashcard, Requirement } from "@ai-interview-prep/shared";
+import { safeFetchJSON } from "@/lib/api";
 
 export default function KitBuilderPage() {
   const params = useParams();
@@ -34,10 +35,9 @@ export default function KitBuilderPage() {
 
   useEffect(() => {
     if (!kitId) return;
-    fetch(`/api/kits/${kitId}`)
-      .then((res) => res.json())
+    safeFetchJSON<Kit>(`/api/kits/${kitId}`)
       .then((data) => {
-        if (data && !data.error) setKit(data);
+        if (data) setKit(data);
       })
       .catch((err) => console.error(err))
       .finally(() => setLoading(false));
@@ -47,9 +47,8 @@ export default function KitBuilderPage() {
     setKit(updatedKit);
     setSaving(true);
     try {
-      await fetch(`/api/kits/${kitId}`, {
+      await safeFetchJSON<Kit>(`/api/kits/${kitId}`, {
         method: "PUT",
-        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(updatedKit),
       });
     } catch (err) {
@@ -85,15 +84,11 @@ export default function KitBuilderPage() {
     if (!kit) return;
     setRegeneratingCategory(category);
     try {
-      const res = await fetch(`/api/kits/${kitId}/regenerate-section`, {
+      const updated = await safeFetchJSON<Kit>(`/api/kits/${kitId}/regenerate-section`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ category }),
       });
-      if (res.ok) {
-        const updated = await res.json();
-        setKit(updated);
-      }
+      if (updated) setKit(updated);
     } catch (err) {
       console.error(err);
     } finally {
