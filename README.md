@@ -2,6 +2,11 @@
 
 > A full-stack web application, resilient web scraping pipeline, LLM generation engine, and CLI batch evaluator for constructing evidence-backed, highly targeted job interview preparation kits.
 
+### 🌐 Live Production Links
+- **Live Web Application**: [https://ai-interview-prep-frontend-d7z9.onrender.com](https://ai-interview-prep-frontend-d7z9.onrender.com)
+- **Live Backend Service**: [https://ai-interview-prep-9cu6.onrender.com/api/health](https://ai-interview-prep-9cu6.onrender.com/api/health)
+- **Sample Live Kit Builder**: [https://ai-interview-prep-frontend-d7z9.onrender.com/builder/kit-1789220371724-61](https://ai-interview-prep-frontend-d7z9.onrender.com/builder/kit-1789220371724-61)
+
 ---
 
 ## 1. Executive Summary & Architecture Overview
@@ -51,7 +56,7 @@
 - **Testing**: Vitest unit testing suite.
 - **CLI Evaluator**: Node.js batch evaluator generating Appendix B compliant output.
 
-### Installation & Commands
+### Installation & Local Commands
 
 ```bash
 # Install workspace dependencies
@@ -205,8 +210,10 @@ Tests include:
 
 ## 10. Evaluation Setup & Verification Summary
 
-All components have been built, compiled, and verified:
+All components have been built, compiled, deployed, and verified:
+- Live Web App: [https://ai-interview-prep-frontend-d7z9.onrender.com](https://ai-interview-prep-frontend-d7z9.onrender.com)
+- Live Backend Service: [https://ai-interview-prep-9cu6.onrender.com/api/health](https://ai-interview-prep-9cu6.onrender.com/api/health)
 - Shared Zod schemas compiled: `npm run build:shared` (Clean)
 - Vitest Test Suite: 8 passed out of 8 tests
 - CLI Evaluator: Executed 5 cases cleanly producing `evaluation-output.json`
-- Next.js Web App: App Router pages (`/`, `/generator`, `/builder/[id]`, `/practice/[id]`) compiled with zero errors.
+- Next.js Web App: App Router pages compiled with zero errors.
